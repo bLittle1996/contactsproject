@@ -78,6 +78,7 @@
             @endif
 
             <div class="content">
+                <div id="app"></div>
                 <div class="title m-b-md">
                     Laravel
                 </div>
@@ -92,4 +93,5 @@
             </div>
         </div>
     </body>
+    <script src="js/app.js"></script>
 </html>
