@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Auth::routes();
+
+Route::get('/logout', function () {
+	Auth::logout();
+	return redirect('/');
 });
+
+Route::any('/{wildcard?}', function () {
+	if(Auth::check()) return view('home');
+	else return view('welcome');
+})->where('wildcard', '.*');

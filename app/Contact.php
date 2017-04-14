@@ -14,6 +14,8 @@ class Contact extends Model
 	public $timestamps = false;
 	//add our custom accessor method (getFullNameAttribute), so it appears in our JSON when serialized
 	protected $appends = ['full_name'];
+	//make these fields fillable by saying that none of them are guarded!
+	protected $guarded = [];
 
 	//saves me having to do this in javascript, effectively makes a fake field on the model that can be accessed via $model->full_name.
 	public function getFullNameAttribute() {

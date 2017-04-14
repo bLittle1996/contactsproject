@@ -1,0 +1,32 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+.menu-bar {
+	background-color: #FFF;
+	display: flex;
+	justify-content: space-around;
+	padding: 15px 0 15px 0;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+	.brand {
+		font-size: 20px;
+		text-decoration: none;
+		color: black;
+		.brand-color {
+			color: $brand-primary;
+			font-weight: bold;
+		}
+	}
+	.links {
+		.link {
+			text-decoration: none;
+			color: $text-color;
+			&:hover {
+				color: darken($text-color, 10%);
+			}
+			margin-left: 15px;
+		}
+	}
+}
