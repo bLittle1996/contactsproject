@@ -29,10 +29,10 @@ class StoreContactRequest extends FormRequest
             'addr_last_name' => 'required|max:50',
             // 'addr_city' => 'required|max:50',
             // 'addr_region' => 'required|max:50',
-            // 'addr_email_1' => 'required|max:128',
-            // 'addr_email_2' => 'required|max:128',
-            // 'addr_phone_1' => 'required|max:254',
-            // 'addr_phone_2' => 'required|max:254'
+            'addr_email_1' => 'nullable|email|max:128',
+            'addr_email_2' => 'nullable|email|max:128',
+            'addr_phone_1' => 'nullable|regex:/^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/m|max:254',
+            'addr_phone_2' => 'nullable|regex:/^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/m|max:254'
         ];
     }
 }
